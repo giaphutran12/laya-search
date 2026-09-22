@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#080808"><title>Laya Search</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<canvas id="logo-canvas" aria-hidden="true"></canvas>
+<button id="settings-toggle" class="settings-toggle" aria-label="Search settings" aria-expanded="false">⚙</button>
+<aside id="settings" hidden><h2>Search settings</h2><p class="settings-note">Search public YC company descriptions. Scores are model estimates from a keyword shortlist. Image and logo-color search are not indexed.</p><label class="motion-label"><input type="checkbox" id="motion-toggle" checked> Animate logos</label><a href="https://www.ycombinator.com/companies" target="_blank" rel="noopener noreferrer">YC directory ↗</a></aside>
+<main>
+<section id="results-panel" class="results-panel" aria-label="Search results" hidden><div id="company-grid" aria-label="Companies"></div></section>
+<section class="search-dock" aria-label="Company search"><form id="search-form"><label class="sr-only" for="query">Describe the companies you want to find</label><input id="query" name="query" placeholder="Describe a startup…" autocomplete="off" maxlength="500" required><button id="submit-search" type="submit" aria-label="Search companies"><span class="search-orbit"></span></button><button id="stop-search" type="button" aria-label="Stop search" hidden>■ Stop</button></form><div class="search-controls"><div class="engine-picker" aria-label="Search engine"><button type="button" data-engine="laya" aria-pressed="true">Laya <span>LOCAL</span></button><button type="button" data-engine="jev" aria-pressed="false">JEV <span>API</span></button></div><p id="engine-status" role="status">Connecting…</p></div><div class="search-caption"><span id="results-meta"></span><span><span class="yc-mark">Y</span> <span id="directory-count">Loading startups…</span></span></div><div id="notice" role="status" aria-live="polite"></div><section class="search-suggestions" aria-label="Suggested searches"><div class="suggestions-heading"><span>TRY SOMETHING</span><button id="more-ideas" type="button">More ideas <span aria-hidden="true">↻</span></button></div><div id="suggested-searches" aria-live="polite"></div></section></section>
+</main>
+<div id="company-tooltip" role="tooltip" hidden></div>
+<button id="shuffle" aria-label="Release result logos" title="Release result logos">✳</button>
+<dialog id="company-dialog"><button id="close-dialog" aria-label="Close company details">×</button><div id="company-details"></div></dialog>
+<script src="/vendor/matter.min.js" defer></script><script src="/physics.js" defer></script><script src="/app.js" defer></script>
+</body></html>

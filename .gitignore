@@ -1,0 +1,8 @@
+.env*
+!.env.example
+.venv/
+models/
+__pycache__/
+*.log
+node_modules/
+.vercel/
