@@ -29,7 +29,7 @@ The snapshot includes 6,245 publicly launched YC companies, fetched September 22
 
 This is a text-search implementation, not full feature parity with the video: logo-color/image queries are not indexed, and company age means batch metadata rather than verified founding dates. The interface now follows the supplied video: centered search, compact scored logo grid, hover details, and a canvas logo pile with gravity, collisions, pointer forces, and a toss control. It uses simplified circular collision bodies for square logo sprites. No sub-second guarantee or search-quality benchmark. API errors remain visible, with no silent engine fallback.
 
-The server binds only to loopback; it is a local tool, not production hosting. Model files and secrets are excluded by `.gitignore`.
+`npm start` binds only to loopback for local use. The public Vercel deployment serves the same UI and JEV API search; the Apple-only Laya Core ML engine remains local-only. Model files and secrets are excluded by `.gitignore`.
 
 ## Sources
 
